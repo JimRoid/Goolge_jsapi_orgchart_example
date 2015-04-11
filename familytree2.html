@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["orgchart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        data.addRows([
+          ['黃祥源,蘇梅貴', '', ''],
+
+          ['黃秀媚,鄒世誠', '黃祥源,蘇梅貴', ''],
+          ['黃正輝,張寶珍', '黃祥源,蘇梅貴', ''],
+          ['黃正鵬', '黃祥源,蘇梅貴', ''],
+          ['黃秀鳳,林思章', '黃祥源,蘇梅貴', ''],
+          ['黃正標,許美嬋', '黃祥源,蘇梅貴', ''],
+
+          ['鄒毅俞', '黃秀媚,鄒世誠', ''],
+          ['鄒子維', '黃秀媚,鄒世誠', ''],
+          ['鄒子豪', '黃秀媚,鄒世誠', ''],
+
+          ['黃文楷', '黃正輝,張寶珍', ''],
+          ['黃文昇', '黃正輝,張寶珍', ''],
+
+          ['黃雪筑', '黃正鵬', ''],
+          ['黃淯漩', '黃正鵬', ''],
+          ['黃文哲', '黃正鵬', ''],
+
+          ['林彥宇', '黃秀鳳,林思章', ''], 
+
+          ['黃之宸', '黃正標,許美嬋', ''],
+          ['黃苡家', '黃正標,許美嬋', ''],         
+        ]);
+
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        chart.draw(data, {allowHtml:true});
+      }
+   </script>
+    </head>
+  <body>
+    <div id="chart_div""></div>
+  </body>
+</html>

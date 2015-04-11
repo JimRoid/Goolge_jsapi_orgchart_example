@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["orgchart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        data.addRows([
+          ['黃祥三,姜雲妹', '', ''],
+
+          ['黃碧珠,簡聰寬', '黃祥三,姜雲妹', ''],
+          ['黃碧珍', '黃祥三,姜雲妹', ''],
+          ['黃正陽', '黃祥三,姜雲妹', ''],
+          ['黃正鈞,賴佳琪', '黃祥三,姜雲妹', ''],
+
+          ['簡婕宇', '黃碧珠,簡聰寬', ''],
+          ['陳順恩', '黃碧珍', ''],
+          ['陳彥博', '黃碧珍', ''],
+          ['黃文豪', '黃正陽', ''],
+          ['黃文宣', '黃正陽', ''],
+          ['黃綺雯', '黃正陽', ''],
+          ['黃文又', '黃正鈞,賴佳琪', ''],
+          ['黃文勁', '黃正鈞,賴佳琪', ''],
+               
+        ]);
+
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        chart.draw(data, {allowHtml:true});
+      }
+   </script>
+    </head>
+  <body>
+    <div id="chart_div""></div>
+  </body>
+</html>

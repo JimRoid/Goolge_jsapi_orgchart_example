@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["orgchart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        data.addRows([
+          ['黃祥鏡,何嬌妹', '', '阿公阿婆'],
+          ['黃運妹,彭及', '黃祥鏡,何嬌妹', ''],
+          ['黃秀梨,莊錦彰', '黃祥鏡,何嬌妹', ''],
+		  ['黃秀平,徐盛良', '黃祥鏡,何嬌妹', ''],
+          ['陳秀美,鍾德山', '黃祥鏡,何嬌妹', '為什麼陳？'],
+          ['黃正東,饒淑娟', '黃祥鏡,何嬌妹', ''],
+          ['黃正光,陳華香', '黃祥鏡,何嬌妹', ''],
+          ['黃正峰,張淑惠', '黃祥鏡,何嬌妹', ''],
+          ['黃正通,賴紫蘭', '黃祥鏡,何嬌妹', ''],
+
+          ['彭康潤', '黃運妹,彭及', ''],
+          ['彭康華', '黃運妹,彭及', ''],
+          ['彭康福', '黃運妹,彭及', ''],
+          ['彭康文', '黃運妹,彭及', ''],
+
+          ['莊孟泓', '黃秀梨,莊錦彰', ''],
+          ['莊芸榕', '黃秀梨,莊錦彰', '以前叫美真，跪求老公名稱'],
+          ['莊哥哥', '莊孟泓', ''],
+          ['莊妹妹', '莊孟泓', ''],
+          ['小哥哥', '莊芸榕', ''],
+          ['小弟弟', '莊芸榕', ''],
+
+          ['徐正偉', '黃秀平,徐盛良', ''],
+          ['徐正達', '黃秀平,徐盛良', ''],
+          ['徐正俊', '黃秀平,徐盛良', ''],
+
+          ['鍾清華', '陳秀美,鍾德山', ''],
+          ['陳禹叡', '鍾清華', ''],
+          ['鍾易蓁', '陳秀美,鍾德山', ''],
+          ['鍾永信', '陳秀美,鍾德山', ''],
+          ['鍾和穎', '鍾永信', ''],
+
+          ['黃文麒', '黃正東,饒淑娟', ''],
+          ['黃玉生', '黃正東,饒淑娟', ''],
+          ['黃金寬', '黃正東,饒淑娟', ''],
+
+          ['黃文錦', '黃正光,陳華香', '作者有事Line'],
+          ['黃文柏', '黃正光,陳華香', '作者的弟弟'],
+
+          ['黃文樟', '黃正峰,張淑惠', '溫小特'],
+          ['黃鈺羽', '黃正峰,張淑惠', ''],
+          ['黃鈺桂', '黃正峰,張淑惠', ''],
+
+          ['黃文男', '黃正通,賴紫蘭', ''],
+          ['黃鈺秀', '黃正通,賴紫蘭', ''],
+        ]);
+
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        chart.draw(data, {allowHtml:true});
+      }
+   </script>
+    </head>
+  <body>
+    <div id="chart_div""></div>
+  </body>
+</html>
